@@ -47,7 +47,7 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <span>·</span>
     <span>Projected completion: ~17 Jul 2026</span>
   </p>
-  <p class="ts" id="ts"></p>
+  <p class="ts">Generated 9 Jun 2026 12:30</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
@@ -81,8 +81,6 @@ new Chart(document.getElementById("c"),{
     }
   }
 });
-document.getElementById("ts").textContent=
-  "Generated "+new Date().toLocaleString("en-GB",{day:"2-digit",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
 </script>
 </body>
 </html>
