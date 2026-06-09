@@ -43,9 +43,9 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <p class="meta">
     <span>Start date: 01 Jun 2026</span>
     <span>·</span>
-    <span>Velocity: 2.5 issues/week</span>
+    <span>Velocity: 2.14 issues/week</span>
     <span>·</span>
-    <span>Projected completion: ~10 Jul 2026</span>
+    <span>Projected completion: ~17 Jul 2026</span>
   </p>
   <p class="ts" id="ts"></p>
 </div>
@@ -54,12 +54,12 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
 new Chart(document.getElementById("c"),{
   type:"line",
   data:{
-    labels:["1 Jun","2 Jun","3 Jun","4 Jun","5 Jun","6 Jun","7 Jun","8 Jun","15 Jun","22 Jun","29 Jun","6 Jul","10 Jul"],
+    labels:["1 Jun","2 Jun","3 Jun","4 Jun","5 Jun","6 Jun","7 Jun","8 Jun","9 Jun","16 Jun","23 Jun","30 Jun","7 Jul","14 Jul","17 Jul"],
     datasets:[
-      {label:"Remaining",data:[15,14,14,14,12,12,12,12,null,null,null,null,null],borderColor:"#D85A30",
+      {label:"Remaining",data:[15,14,14,14,12,12,12,12,12,null,null,null,null,null,null],borderColor:"#D85A30",
        backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,spanGaps:false,tension:0.1},
-      {label:"Projected",data:[null,null,null,null,null,null,null,12,9.5,7.0,4.5,2.0,0.0],borderColor:"#639922",
+      {label:"Projected",data:[null,null,null,null,null,null,null,null,12,9.86,7.71,5.57,3.43,1.29,0.0],borderColor:"#639922",
        borderWidth:1.5,borderDash:[8,4],pointRadius:0,fill:false,spanGaps:true,tension:0.1}
     ]
   },
