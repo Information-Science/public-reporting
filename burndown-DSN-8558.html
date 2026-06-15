@@ -12,9 +12,12 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
 .m{background:#F1EFE8;border-radius:8px;padding:1rem;flex:1;min-width:100px}
 .ml{font-size:13px;color:#5F5E5A;margin-bottom:4px}
 .mv{font-size:24px;font-weight:500}
-.legend{display:flex;gap:16px;margin-bottom:12px;font-size:12px;color:#5F5E5A;flex-wrap:wrap}
+.mvsm{font-size:16px;font-weight:400;color:#5F5E5A}
+.legend{display:flex;gap:16px;margin-bottom:12px;font-size:12px;color:#5F5E5A;flex-wrap:wrap;align-items:center}
 .legend span{display:flex;align-items:center;gap:5px}
 .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+.sl{width:20px;height:2px;border-radius:1px;display:inline-block;vertical-align:middle}
+.sd{width:20px;height:0;display:inline-block;vertical-align:middle}
 .cw{position:relative;width:100%;height:300px}
 .meta{font-size:12px;color:#888780;margin:14px 0 0}
 .meta span{margin-right:1.5em}
@@ -28,13 +31,13 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">88.0</div></div>
     <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">0</div></div>
     <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">88.0</div></div>
-    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#BA7517">7.0</div></div>
+    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">0.0<span class="mvsm"> story points/wk</span></div></div>
   </div>
   <div class="legend">
-    <span><span class="sw" style="background:#D85A30"></span>remaining</span>
-    <span><span class='sw' style='background:#B4B2A9'></span>scope</span>
-    <span><span class='sw' style='background:#639922'></span>projected</span>
-    
+    <span><span class="sw" style="background:#EF9F27"></span>completed / wk</span>
+    <span><span class="sl" style="background:#D85A30"></span>remaining</span>
+    <span><span class="sd" style="border-top:2px dashed #639922"></span>projected</span>
+    <span><span class="sd" style="border-top:2px dashed #7C6FCD"></span>avg 0.0 story points/wk</span>
   </div>
   <div class="cw">
     <canvas id="c" role="img" aria-label="Burndown chart for DSN-8558. 88.0 of 88.0 story points remaining.">
@@ -44,26 +47,28 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <p class="meta">
     <span>Start date: 01 Jun 2026</span>
     <span>·</span>
-    <span>Velocity: 0.0 story points/week</span>
-    <span>·</span>
     <span>Projected completion: unknown</span>
   </p>
-  <p class="ts">Generated 15 Jun 2026 18:42</p>
+  <p class="ts">Generated 15 Jun 2026 18:55</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 new Chart(document.getElementById("c"),{
-  type:"line",
+  type:"bar",
   data:{
-    labels:["1 Jun","2 Jun","3 Jun","4 Jun","5 Jun","6 Jun","7 Jun","8 Jun","9 Jun","10 Jun","11 Jun","12 Jun","13 Jun","14 Jun","15 Jun"],
+    labels:["1 Jun","8 Jun","15 Jun","22 Jun","29 Jun","6 Jul","13 Jul","20 Jul","27 Jul","3 Aug","10 Aug","17 Aug","24 Aug","31 Aug","7 Sep","14 Sep","21 Sep","28 Sep","5 Oct","12 Oct","19 Oct","26 Oct","2 Nov","9 Nov","16 Nov","23 Nov","30 Nov","7 Dec","14 Dec","21 Dec","28 Dec","4 Jan","11 Jan","18 Jan","25 Jan","1 Feb","8 Feb","15 Feb","22 Feb","1 Mar","8 Mar","15 Mar","22 Mar","29 Mar","5 Apr","12 Apr","19 Apr","26 Apr","3 May","10 May","17 May","24 May","31 May","7 Jun","14 Jun"],
     datasets:[
-      {label:"Remaining",data:[5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,82.0,82.0,82.0,88.0,88.0,88.0,88.0],borderColor:"#D85A30",
-       backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
-       pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,spanGaps:false,tension:0.1},
-      {label:"Scope",data:[5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,82.0,82.0,82.0,88.0,88.0,88.0,88.0],borderColor:"#B4B2A9",borderWidth:1.5,
-       borderDash:[5,4],pointRadius:0,fill:false,tension:0},
-      {label:"Projected",data:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,88.0],borderColor:"#639922",
-       borderWidth:1.5,borderDash:[8,4],pointRadius:0,fill:false,spanGaps:true,tension:0.1},
+      {type:"bar",label:"Completed/wk",data:[0.0,0.0,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+       backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
+      {type:"line",label:"Avg velocity",data:[0.0,0.0,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+       borderColor:"#7C6FCD",borderWidth:1.5,borderDash:[4,3],
+       pointRadius:0,fill:false,yAxisID:"y2",spanGaps:false,tension:0},
+      {type:"line",label:"Remaining",data:[5.0,88.0,88.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+       borderColor:"#D85A30",backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
+       pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,yAxisID:"y",spanGaps:false,tension:0.1},
+      {type:"line",label:"Projected",data:[null,null,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0],
+       borderColor:"#639922",borderWidth:1.5,borderDash:[8,4],
+       pointRadius:0,fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
   },
   options:{
@@ -74,13 +79,23 @@ new Chart(document.getElementById("c"),{
       tooltip:{backgroundColor:"#fff",titleColor:"#2C2C2A",bodyColor:"#5F5E5A",
                borderColor:"#D3D1C7",borderWidth:0.5,padding:10,
                filter:item=>item.parsed.y!==null,
-               callbacks:{label:ctx=>ctx.dataset.label+": "+Math.round(ctx.parsed.y)}}
+               callbacks:{label:ctx=>{
+                 const v=Math.round(ctx.parsed.y);
+                 if(ctx.dataset.label==="Completed/wk") return "Completed: "+v+" story points";
+                 if(ctx.dataset.label==="Avg velocity") return "Avg: "+ctx.parsed.y.toFixed(1)+" story points/wk";
+                 return ctx.dataset.label+": "+v+" story points";
+               }}}
     },
     scales:{
-      x:{grid:{color:"rgba(0,0,0,0.05)"},ticks:{color:"#888780",font:{size:11},maxRotation:45,autoSkip:true,maxTicksLimit:9}},
-      y:{min:0,grid:{color:"rgba(0,0,0,0.05)"},
+      x:{grid:{color:"rgba(0,0,0,0.05)"},ticks:{color:"#888780",font:{size:11},maxRotation:45,autoSkip:true,maxTicksLimit:10}},
+      y:{type:"linear",position:"left",min:0,suggestedMax:96.0,
+         grid:{color:"rgba(0,0,0,0.05)"},
          ticks:{color:"#888780",font:{size:11},callback:v=>Math.round(v)},
-         title:{display:true,text:"story points",color:"#888780",font:{size:11}}}
+         title:{display:true,text:"story points remaining",color:"#888780",font:{size:11}}},
+      y2:{type:"linear",position:"right",min:0,suggestedMax:5,
+          grid:{drawOnChartArea:false},
+          ticks:{color:"#BA7517",font:{size:11},callback:v=>Math.round(v)},
+          title:{display:true,text:"completed / week",color:"#BA7517",font:{size:11}}}
     }
   }
 });
