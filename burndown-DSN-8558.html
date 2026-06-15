@@ -25,8 +25,8 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
 <div class="card">
   <h1>DSN-8558 · Hydra in Profiles</h1>
   <div class="metrics">
-    <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">89.0</div></div>
-    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">1</div></div>
+    <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">88.0</div></div>
+    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">0</div></div>
     <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">88.0</div></div>
     <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#BA7517">7.0</div></div>
   </div>
@@ -34,35 +34,36 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <span><span class="sw" style="background:#D85A30"></span>remaining</span>
     <span><span class='sw' style='background:#B4B2A9'></span>scope</span>
     <span><span class='sw' style='background:#639922'></span>projected</span>
+    
   </div>
   <div class="cw">
-    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8558. 88.0 of 89.0 story points remaining.">
-      Burndown: 88.0 of 89.0 story points remaining as of 01 Jun 2026.
+    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8558. 88.0 of 88.0 story points remaining.">
+      Burndown: 88.0 of 88.0 story points remaining as of 01 Jun 2026.
     </canvas>
   </div>
   <p class="meta">
     <span>Start date: 01 Jun 2026</span>
     <span>·</span>
-    <span>Velocity: 0.45 story points/week</span>
+    <span>Velocity: 0.0 story points/week</span>
     <span>·</span>
-    <span>Projected completion: ~14 Jun 2027</span>
+    <span>Projected completion: unknown</span>
   </p>
-  <p class="ts">Generated 15 Jun 2026 07:56</p>
+  <p class="ts">Generated 15 Jun 2026 18:42</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 new Chart(document.getElementById("c"),{
   type:"line",
   data:{
-    labels:["1 Jun","2 Jun","3 Jun","4 Jun","5 Jun","6 Jun","7 Jun","8 Jun","9 Jun","10 Jun","11 Jun","12 Jun","13 Jun","14 Jun","15 Jun","22 Jun","29 Jun","6 Jul","13 Jul","20 Jul","27 Jul","3 Aug","10 Aug","17 Aug","24 Aug","31 Aug","7 Sep","14 Sep","21 Sep","28 Sep","5 Oct","12 Oct","19 Oct","26 Oct","2 Nov","9 Nov","16 Nov","23 Nov","30 Nov","7 Dec","14 Dec","21 Dec","28 Dec","4 Jan","11 Jan","18 Jan","25 Jan","1 Feb","8 Feb","15 Feb","22 Feb","1 Mar","8 Mar","15 Mar","22 Mar","29 Mar","5 Apr","12 Apr","19 Apr","26 Apr","3 May","10 May","17 May","24 May","31 May","7 Jun","14 Jun"],
+    labels:["1 Jun","2 Jun","3 Jun","4 Jun","5 Jun","6 Jun","7 Jun","8 Jun","9 Jun","10 Jun","11 Jun","12 Jun","13 Jun","14 Jun","15 Jun"],
     datasets:[
-      {label:"Remaining",data:[6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,82.0,82.0,82.0,88.0,88.0,88.0,88.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],borderColor:"#D85A30",
+      {label:"Remaining",data:[5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,82.0,82.0,82.0,88.0,88.0,88.0,88.0],borderColor:"#D85A30",
        backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,spanGaps:false,tension:0.1},
-      {label:"Scope",data:[6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,83.0,83.0,83.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0,89.0],borderColor:"#B4B2A9",borderWidth:1.5,
+      {label:"Scope",data:[5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,82.0,82.0,82.0,88.0,88.0,88.0,88.0],borderColor:"#B4B2A9",borderWidth:1.5,
        borderDash:[5,4],pointRadius:0,fill:false,tension:0},
-      {label:"Projected",data:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,88.0,87.55,87.09,86.64,86.18,85.73,85.27,84.82,84.36,83.91,83.45,83.0,82.55,82.09,81.64,81.18,80.73,80.27,79.82,79.36,78.91,78.45,78.0,77.55,77.09,76.64,76.18,75.73,75.27,74.82,74.36,73.91,73.45,73.0,72.55,72.09,71.64,71.18,70.73,70.27,69.82,69.36,68.91,68.45,68.0,67.55,67.09,66.64,66.18,65.73,65.27,64.82,64.36],borderColor:"#639922",
-       borderWidth:1.5,borderDash:[8,4],pointRadius:0,fill:false,spanGaps:true,tension:0.1}
+      {label:"Projected",data:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,88.0],borderColor:"#639922",
+       borderWidth:1.5,borderDash:[8,4],pointRadius:0,fill:false,spanGaps:true,tension:0.1},
     ]
   },
   options:{
