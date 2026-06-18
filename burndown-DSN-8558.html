@@ -29,19 +29,20 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <h1>DSN-8558 · Hydra in Profiles</h1>
   <div class="metrics">
     <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">88.0</div></div>
-    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">0</div></div>
-    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">88.0</div></div>
-    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">0.0<span class="mvsm"> story points/wk</span></div></div>
+    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">1.0</div></div>
+    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">10.0</div></div>
+    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">87.0</div></div>
+    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">0.3<span class="mvsm"> story points/wk</span></div></div>
   </div>
   <div class="legend">
     <span><span class="sw" style="background:#EF9F27"></span>completed / wk</span>
     <span><span class="sl" style="background:#D85A30"></span>remaining</span>
     <span><span class="sd" style="border-top:2px dashed #639922"></span>projected</span>
-    <span><span class="sd" style="border-top:2px dashed #7C6FCD"></span>avg 0.0 story points/wk</span>
+    <span><span class="sd" style="border-top:2px dashed #7C6FCD"></span>avg 0.3 story points/wk</span>
   </div>
   <div class="cw">
-    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8558. 88.0 of 88.0 story points remaining.">
-      Burndown: 88.0 of 88.0 story points remaining as of 01 Jun 2026.
+    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8558. 87.0 of 88.0 story points remaining.">
+      Burndown: 87.0 of 88.0 story points remaining as of 01 Jun 2026.
     </canvas>
   </div>
   <p class="meta">
@@ -49,7 +50,7 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <span>·</span>
     <span>Projected completion: unknown</span>
   </p>
-  <p class="ts">Generated 18 Jun 2026 07:39</p>
+  <p class="ts">Generated 18 Jun 2026 19:51</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
@@ -58,15 +59,15 @@ new Chart(document.getElementById("c"),{
   data:{
     labels:["1 Jun","8 Jun","15 Jun","25 Jun","2 Jul","9 Jul","16 Jul","23 Jul","30 Jul","6 Aug","13 Aug","20 Aug","27 Aug","3 Sep","10 Sep","17 Sep","24 Sep","1 Oct","8 Oct","15 Oct","22 Oct","29 Oct","5 Nov","12 Nov","19 Nov","26 Nov","3 Dec","10 Dec","17 Dec","24 Dec","31 Dec","7 Jan","14 Jan","21 Jan","28 Jan","4 Feb","11 Feb","18 Feb","25 Feb","4 Mar","11 Mar","18 Mar","25 Mar","1 Apr","8 Apr","15 Apr","22 Apr","29 Apr","6 May","13 May","20 May","27 May","3 Jun","10 Jun","17 Jun"],
     datasets:[
-      {type:"bar",label:"Completed/wk",data:[0.0,0.0,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"bar",label:"Completed/wk",data:[0.0,0.0,1.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
        backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"Avg velocity",data:[0.0,0.0,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"line",label:"Avg velocity",data:[0.3,0.3,0.3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
        borderColor:"#7C6FCD",borderWidth:1.5,borderDash:[4,3],
        pointRadius:0,fill:false,yAxisID:"y2",spanGaps:false,tension:0},
-      {type:"line",label:"Remaining",data:[5.0,88.0,88.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"line",label:"Remaining",data:[5.0,88.0,87.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
        borderColor:"#D85A30",backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,yAxisID:"y",spanGaps:false,tension:0.1},
-      {type:"line",label:"Projected",data:[null,null,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0,88.0],
+      {type:"line",label:"Projected",data:[null,null,87.0,86.67,86.33,86.0,85.67,85.33,85.0,84.67,84.33,84.0,83.67,83.33,83.0,82.67,82.33,82.0,81.67,81.33,81.0,80.67,80.33,80.0,79.67,79.33,79.0,78.67,78.33,78.0,77.67,77.33,77.0,76.67,76.33,76.0,75.67,75.33,75.0,74.67,74.33,74.0,73.67,73.33,73.0,72.67,72.33,72.0,71.67,71.33,71.0,70.67,70.33,70.0,69.67],
        borderColor:"#639922",borderWidth:1.5,borderDash:[8,4],
        pointRadius:0,fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
