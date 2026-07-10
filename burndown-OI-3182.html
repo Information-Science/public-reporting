@@ -29,10 +29,10 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <h1>OI-3182 · DNF Automated Patching Strategy (Epic)</h1>
   <div class="metrics">
     <div class="m"><div class="ml">total issues</div><div class="mv" style="color:#2C2C2A">29</div></div>
-    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">19</div></div>
-    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">1</div></div>
-    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">10</div></div>
-    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">2.3<span class="mvsm"> issues/wk</span></div></div>
+    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">24</div></div>
+    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">0</div></div>
+    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">5</div></div>
+    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">3.2<span class="mvsm"> issues/wk</span></div></div>
   </div>
   <div class="legend">
     <span><span class="sw" style="background:#EF9F27"></span>completed / wk</span>
@@ -41,33 +41,33 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <span><span class="sd" style="border-top:2px dashed #7C6FCD"></span>2wk avg velocity</span>
   </div>
   <div class="cw">
-    <canvas id="c" role="img" aria-label="Burndown chart for OI-3182. 10 of 29 issues remaining.">
-      Burndown: 10 of 29 issues remaining as of 01 Jun 2026.
+    <canvas id="c" role="img" aria-label="Burndown chart for OI-3182. 5 of 29 issues remaining.">
+      Burndown: 5 of 29 issues remaining as of 01 Jun 2026.
     </canvas>
   </div>
   <p class="meta">
     <span>Start date: 01 Jun 2026</span>
     <span>·</span>
-    <span>Projected completion: ~13 Aug 2026</span>
+    <span>Projected completion: ~24 Jul 2026</span>
   </p>
-  <p class="ts">Generated 9 Jul 2026 07:15</p>
+  <p class="ts">Generated 10 Jul 2026 07:10</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 new Chart(document.getElementById("c"),{
   type:"bar",
   data:{
-    labels:["1 Jun","8 Jun","15 Jun","22 Jun","29 Jun","6 Jul","16 Jul","23 Jul","30 Jul","6 Aug","13 Aug"],
+    labels:["1 Jun","8 Jun","15 Jun","22 Jun","29 Jun","6 Jul","17 Jul","24 Jul"],
     datasets:[
-      {type:"bar",label:"Completed/wk",data:[5,0,0,0,3,6,null,null,null,null,null],
+      {type:"bar",label:"Completed/wk",data:[5,0,0,0,3,11,null,null],
        backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"Avg velocity",data:[5.0,2.5,0.0,0.0,1.5,4.5,null,null,null,null,null],
+      {type:"line",label:"Avg velocity",data:[5.0,2.5,0.0,0.0,1.5,7.0,null,null],
        borderColor:"#7C6FCD",borderWidth:1.5,borderDash:[4,3],
        pointRadius:0,fill:false,yAxisID:"y2",spanGaps:false,tension:0},
-      {type:"line",label:"Remaining",data:[19,19,20,20,20,10,null,null,null,null,null],
+      {type:"line",label:"Remaining",data:[19,19,20,20,20,5,null,null],
        borderColor:"#D85A30",backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,yAxisID:"y",spanGaps:false,tension:0.1},
-      {type:"line",label:"Projected",data:[null,null,null,null,null,10,7.67,5.33,3.0,0.67,0.0],
+      {type:"line",label:"Projected",data:[null,null,null,null,null,5,1.83,0.0],
        borderColor:"#639922",borderWidth:1.5,borderDash:[8,4],
        pointRadius:0,fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
@@ -93,7 +93,7 @@ new Chart(document.getElementById("c"),{
          grid:{color:"rgba(0,0,0,0.05)"},
          ticks:{color:"#888780",font:{size:11},callback:v=>Math.round(v)},
          title:{display:true,text:"issues remaining",color:"#888780",font:{size:11}}},
-      y2:{type:"linear",position:"right",min:0,suggestedMax:12,
+      y2:{type:"linear",position:"right",min:0,suggestedMax:21,
           grid:{drawOnChartArea:false},
           ticks:{color:"#BA7517",font:{size:11},callback:v=>Math.round(v)},
           title:{display:true,text:"completed / week",color:"#BA7517",font:{size:11}}}
