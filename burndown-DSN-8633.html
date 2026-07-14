@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Burndown — DSN-8633 · LN Media + Worldcheck blend (blend-65/74)</title>
+<title>Burndown — DSN-8633 · LN Media + Worldcheck blend (blend-65)</title>
 <style>
 body{margin:0;padding:2rem;font-family:sans-serif;background:#f5f5f5}
 .card{background:#fff;border:0.5px solid #D3D1C7;border-radius:12px;padding:1.25rem;max-width:900px;margin:0 auto}
@@ -26,13 +26,13 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
 </head>
 <body>
 <div class="card">
-  <h1>DSN-8633 · LN Media + Worldcheck blend (blend-65/74)</h1>
+  <h1>DSN-8633 · LN Media + Worldcheck blend (blend-65)</h1>
   <div class="metrics">
     <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">79.0</div></div>
-    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">8.0</div></div>
-    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">32.0</div></div>
-    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">71.0</div></div>
-    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">2.7<span class="mvsm"> story points/wk</span></div></div>
+    <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">24.0</div></div>
+    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">19.0</div></div>
+    <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">55.0</div></div>
+    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">8.0<span class="mvsm"> story points/wk</span></div></div>
   </div>
   <div class="legend">
     <span><span class="sw" style="background:#EF9F27"></span>completed / wk</span>
@@ -41,33 +41,33 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
     <span><span class="sd" style="border-top:2px dashed #7C6FCD"></span>2wk avg velocity</span>
   </div>
   <div class="cw">
-    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8633. 71.0 of 79.0 story points remaining.">
-      Burndown: 71.0 of 79.0 story points remaining as of 29 Jun 2026.
+    <canvas id="c" role="img" aria-label="Burndown chart for DSN-8633. 55.0 of 79.0 story points remaining.">
+      Burndown: 55.0 of 79.0 story points remaining as of 29 Jun 2026.
     </canvas>
   </div>
   <p class="meta">
     <span>Start date: 29 Jun 2026</span>
     <span>·</span>
-    <span>Projected completion: ~19 Jan 2027</span>
+    <span>Projected completion: ~1 Sep 2026</span>
   </p>
-  <p class="ts">Generated 14 Jul 2026 06:43</p>
+  <p class="ts">Generated 14 Jul 2026 18:33</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 new Chart(document.getElementById("c"),{
   type:"bar",
   data:{
-    labels:["29 Jun","6 Jul","13 Jul","21 Jul","28 Jul","4 Aug","11 Aug","18 Aug","25 Aug","1 Sep","8 Sep","15 Sep","22 Sep","29 Sep","6 Oct","13 Oct","20 Oct","27 Oct","3 Nov","10 Nov","17 Nov","24 Nov","1 Dec","8 Dec","15 Dec","22 Dec","29 Dec","5 Jan","12 Jan","19 Jan"],
+    labels:["29 Jun","6 Jul","13 Jul","21 Jul","28 Jul","4 Aug","11 Aug","18 Aug","25 Aug","1 Sep"],
     datasets:[
-      {type:"bar",label:"Completed/wk",data:[0.0,8.0,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"bar",label:"Completed/wk",data:[0.0,8.0,16.0,null,null,null,null,null,null,null],
        backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"Avg velocity",data:[0.0,4.0,4.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"line",label:"Avg velocity",data:[0.0,4.0,12.0,null,null,null,null,null,null,null],
        borderColor:"#7C6FCD",borderWidth:1.5,borderDash:[4,3],
        pointRadius:0,fill:false,yAxisID:"y2",spanGaps:false,tension:0},
-      {type:"line",label:"Remaining",data:[79.0,71.0,71.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+      {type:"line",label:"Remaining",data:[79.0,71.0,55.0,null,null,null,null,null,null,null],
        borderColor:"#D85A30",backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,yAxisID:"y",spanGaps:false,tension:0.1},
-      {type:"line",label:"Projected",data:[null,null,71.0,68.33,65.67,63.0,60.33,57.67,55.0,52.33,49.67,47.0,44.33,41.67,39.0,36.33,33.67,31.0,28.33,25.67,23.0,20.33,17.67,15.0,12.33,9.67,7.0,4.33,1.67,0.0],
+      {type:"line",label:"Projected",data:[null,null,55.0,47.0,39.0,31.0,23.0,15.0,7.0,0.0],
        borderColor:"#639922",borderWidth:1.5,borderDash:[8,4],
        pointRadius:0,fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
@@ -93,7 +93,7 @@ new Chart(document.getElementById("c"),{
          grid:{color:"rgba(0,0,0,0.05)"},
          ticks:{color:"#888780",font:{size:11},callback:v=>Math.round(v)},
          title:{display:true,text:"story points remaining",color:"#888780",font:{size:11}}},
-      y2:{type:"linear",position:"right",min:0,suggestedMax:16,
+      y2:{type:"linear",position:"right",min:0,suggestedMax:30,
           grid:{drawOnChartArea:false},
           ticks:{color:"#BA7517",font:{size:11},callback:v=>Math.round(v)},
           title:{display:true,text:"completed / week",color:"#BA7517",font:{size:11}}}
