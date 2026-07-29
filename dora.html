@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DORA metrics — 4 repos</title>
+<style>
+body{margin:0;padding:2rem;font-family:sans-serif;background:#f5f5f5}
+.card{background:#fff;border:0.5px solid #D3D1C7;border-radius:12px;padding:1.25rem;max-width:1000px;margin:0 auto}
+h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 0.25rem}
+h2{font-size:13px;font-weight:500;color:#2C2C2A;margin:1.75rem 0 0.6rem}
+.sub{font-size:12px;color:#888780;margin:0 0 1rem}
+.metrics{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.m{background:#F1EFE8;border-radius:8px;padding:1rem;flex:1;min-width:150px}
+.ml{font-size:13px;color:#5F5E5A;margin-bottom:4px}
+.mv{font-size:24px;font-weight:500;line-height:1.15}
+.mvsm{font-size:14px;font-weight:400;color:#5F5E5A}
+.mb{margin-top:7px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.pill{color:#fff;font-size:10px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;
+  padding:2px 6px;border-radius:4px}
+.ms{font-size:11px;color:#888780}
+.legend{display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:#5F5E5A;flex-wrap:wrap;align-items:center}
+.legend span{display:flex;align-items:center;gap:5px}
+.sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+.sl{width:20px;height:2px;border-radius:1px;display:inline-block;vertical-align:middle}
+.cw{position:relative;width:100%;height:260px}
+/* The table has eight columns and cannot shrink below its content. Without its own scroll
+   box it pushed the whole page into horizontal scrolling on a narrow viewport. */
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+.tw th,.tw td{white-space:nowrap}
+th{text-align:left;font-weight:500;color:#888780;font-size:11px;text-transform:uppercase;
+  letter-spacing:0.04em;padding:0 8px 6px;border-bottom:0.5px solid #D3D1C7;white-space:nowrap}
+td{padding:7px 8px;border-bottom:0.5px solid #EFEDE5;color:#2C2C2A}
+td.num,th.num{text-align:right}
+td a{color:#2C2C2A;text-decoration:none;border-bottom:1px solid #D3D1C7}
+td a:hover{border-bottom-color:#888780}
+.dim{color:#B4B2A9}
+.hf{margin:0;padding-left:1.1rem;font-size:12px;color:#2C2C2A}
+.hf li{margin-bottom:4px}
+.hf a{color:#D85A30;text-decoration:none}
+.hf a:hover{text-decoration:underline}
+.none{font-size:12px;color:#5F5E5A;margin:0}
+.warn{margin-top:1.5rem;background:#FBF7EC;border:0.5px solid #E8DFC6;border-radius:8px;
+  padding:0.7rem 0.9rem;font-size:11px;color:#5F5E5A}
+.warn ul{margin:5px 0 0;padding-left:1.1rem}
+.meta{font-size:12px;color:#888780;margin:1.5rem 0 0}
+.meta span{margin-right:1.5em}
+.ts{font-size:11px;color:#B4B2A9;text-align:right;margin:6px 0 0}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>DORA metrics · 4 repositories (3 shipped in this window)</h1>
+  <p class="sub">29 Jul 2025 — 29 Jul 2026 · deployments are published GitHub
+    releases; a release that later needed an out-of-band patch counts as a failed change</p>
+
+  <div class="metrics">
+    <div class="m">
+      <div class="ml">deployment frequency</div>
+      <div class="mv" style="color:#E6A817">0.5<span class="mvsm"> rel/wk</span></div>
+      <div class="mb"><span class="pill" style="background:#E6A817">Medium</span>
+        <span class="ms">every 24 d per repo</span></div>
+    </div>
+    <div class="m">
+      <div class="ml">lead time for changes</div>
+      <div class="mv" style="color:#E6A817">10.7 d</div>
+      <div class="mb"><span class="pill" style="background:#E6A817">Medium</span>
+        <span class="ms">median of 156 commits</span></div>
+    </div>
+    <div class="m">
+      <div class="ml">change failure rate</div>
+      <div class="mv" style="color:#D85A30">19.2%</div>
+      <div class="mb"><span class="pill" style="background:#D85A30">Low</span>
+        <span class="ms">5 of 26 releases needed patching</span></div>
+    </div>
+    <div class="m">
+      <div class="ml">time to restore</div>
+      <div class="mv" style="color:#D85A30">24.6 d</div>
+      <div class="mb"><span class="pill" style="background:#D85A30">Low</span>
+        <span class="ms">median hotfix turnaround</span></div>
+    </div>
+  </div>
+
+  <h2>Delivery throughput</h2>
+  <div class="legend">
+    <span><span class="sw" style="background:#EF9F27"></span>releases / month</span>
+    <span><span class="sl" style="background:#7C6FCD"></span>median lead time (days)</span>
+  </div>
+  <div class="cw">
+    <canvas id="c1" role="img" aria-label="Releases per month and median lead time.">
+      26 releases in window; median lead time 10.7 d.
+    </canvas>
+  </div>
+
+  <h2>Stability</h2>
+  <div class="legend">
+    <span><span class="sw" style="background:#D85A30"></span>patch releases / month</span>
+    <span><span class="sl" style="background:#3B6D11"></span>change failure rate (%)</span>
+  </div>
+  <div class="cw">
+    <canvas id="c2" role="img" aria-label="Patch releases per month and change failure rate.">
+      12 patch releases of 26 total.
+    </canvas>
+  </div>
+
+  <h2>By repository</h2>
+  <div class="tw">
+  <table>
+    <thead>
+      <tr>
+        <th>repo</th><th class="num">releases</th><th class="num">cadence</th>
+        <th class="num">lead time</th><th class="num">patches</th><th class="num">cfr</th>
+        <th class="num">restore</th><th>latest</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/ripjar/data-collection-hub/releases">data-collection-hub</a></td>
+        <td class="num">15</td>
+        <td class="num">24 d</td>
+        <td class="num" style="color:#E6A817">13.1 d
+          <span class="dim">n=111</span></td>
+        <td class="num">7</td>
+        <td class="num" style="color:#D85A30">27%</td>
+        <td class="num">25.1 d</td>
+        <td>v2026.5 <span class="dim">3 Jul 26</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/ripjar/ripjar-hydra/releases">ripjar-hydra</a></td>
+        <td class="num">9</td>
+        <td class="num">10 d</td>
+        <td class="num" style="color:#639922">4.1 d
+          <span class="dim">n=36</span></td>
+        <td class="num">3</td>
+        <td class="num" style="color:#E6A817">11%</td>
+        <td class="num">5.9 d</td>
+        <td>model/standard@v1.1.0 <span class="dim">14 Jul 26</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/ripjar/bowler_hat/releases">bowler_hat</a></td>
+        <td class="num">2</td>
+        <td class="num">135 d</td>
+        <td class="num" style="color:#E6A817">17.4 d
+          <span class="dim">n=9</span></td>
+        <td class="num">2</td>
+        <td class="num" style="color:#3B6D11">0%</td>
+        <td class="num">14.2 mo</td>
+        <td>v5.8.4 <span class="dim">2 Mar 26</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/ripjar/tricorne_hat/releases">tricorne_hat</a></td>
+        <td class="num">0</td>
+        <td class="num">—</td>
+        <td class="num" style="color:#888780">—
+          <span class="dim">n=0</span></td>
+        <td class="num">0</td>
+        <td class="num" style="color:#888780">—</td>
+        <td class="num">—</td>
+        <td>v3.1.2 <span class="dim">28 Apr 25</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Out-of-band patch releases</h2>
+  <ul class="hf">
+      <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.3">ripjar-hydra sdk/2.2.3</a> <span class="dim">1 May 26 · 15.9 d after sdk/2.2.0</span></li>
+      <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.2">ripjar-hydra sdk/2.2.2</a> <span class="dim">21 Apr 26 · 5.9 d after sdk/2.2.0</span></li>
+      <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.1">ripjar-hydra sdk/2.2.1</a> <span class="dim">17 Apr 26 · 2.1 d after sdk/2.2.0</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v2026.2.3">data-collection-hub v2026.2.3</a> <span class="dim">2 Apr 26 · 31.9 d after v2026.2</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v2026.2.2">data-collection-hub v2026.2.2</a> <span class="dim">30 Mar 26 · 28.9 d after v2026.2</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v2026.2.1">data-collection-hub v2026.2.1</a> <span class="dim">7 Mar 26 · 5.9 d after v2026.2</span></li>
+      <li><a href="https://github.com/ripjar/bowler_hat/releases/tag/v5.8.4">bowler_hat v5.8.4</a> <span class="dim">2 Mar 26 · 16.5 mo after v5.8.0</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.3.1">data-collection-hub v3.29.3.1</a> <span class="dim">8 Jan 26 · 25.1 d after v3.29.3</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.3-2">data-collection-hub v3.29.3-2</a> <span class="dim">16 Dec 25 · 2.2 d after v3.29.3</span></li>
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.2.1">data-collection-hub v3.29.2.1</a> <span class="dim">2 Dec 25 · 39.2 d after v3.29.2</span></li>
+      <li class="dim">… and 2 more, 12 in total</li>
+  </ul>
+  <div class="warn"><strong>Caveats</strong>
+    <ul>
+    <li>ripjar/data-collection-hub: v2026.1 has no earlier release on the same version line — excluded from lead time</li>
+    <li>ripjar/ripjar-hydra: model/ame@v1.0.0 has no earlier release on the same version line — excluded from lead time</li>
+    <li>ripjar/ripjar-hydra: sdk/2.1.0 has no earlier release on the same version line — excluded from lead time</li>
+    <li>ripjar/ripjar-hydra: model/standard@v1.0.0 has no earlier release on the same version line — excluded from lead time</li>
+    <li>ripjar/tricorne_hat: nothing released in this window — latest was v3.1.2 on 28 Apr 2025; contributes no metrics</li>
+    <li>ripjar/bowler_hat: patched v5.8.0, v5.9.0 from before this window — counted in time-to-restore but not in the failure rate</li>
+    </ul>
+  </div>
+  <p class="meta">
+    <span>Window: 29 Jul 2025 → 29 Jul 2026</span>
+    <span>·</span>
+    <span>26 releases · 12 patches</span>
+  </p>
+  <p class="ts">Generated 29 Jul 2026 16:28</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// The release train ships in bursts, so roughly every other month is empty. Line series
+// bridge those gaps (spanGaps) because a month with no releases has an UNDEFINED lead time
+// and failure rate, not a zero one -- leaving the gaps unbridged rendered every line as a
+// scatter of disconnected dots, and plotting them as zero would invent a delivery collapse.
+const AXIS="#888780", GRID="rgba(0,0,0,0.05)";
+const tip={backgroundColor:"#fff",titleColor:"#2C2C2A",bodyColor:"#5F5E5A",
+  borderColor:"#D3D1C7",borderWidth:0.5,padding:10,filter:i=>i.parsed.y!==null};
+
+new Chart(document.getElementById("c1"),{
+  type:"bar",
+  data:{
+    labels:["Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26","Jul 26"],
+    datasets:[
+      {type:"bar",label:"Releases",data:[0,0,2,1,1,3,1,1,7,4,3,1,2],
+       backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
+      {type:"line",label:"Lead time",data:[null,null,31.8,12.0,40.2,3.0,22.0,null,3.0,6.1,0.0,10.7,10.0],
+       borderColor:"#7C6FCD",backgroundColor:"rgba(124,111,205,0.06)",borderWidth:2.5,
+       pointRadius:4,pointBackgroundColor:"#7C6FCD",fill:false,yAxisID:"y",
+       spanGaps:true,tension:0.1}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    interaction:{mode:"index",intersect:false},
+    plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:ctx=>
+      ctx.dataset.label==="Releases"
+        ? "Releases: "+ctx.parsed.y
+        : "Median lead time: "+ctx.parsed.y+" d"}}},
+    scales:{
+      x:{grid:{color:GRID},ticks:{color:AXIS,font:{size:11},maxRotation:45,autoSkip:true,maxTicksLimit:12}},
+      y:{type:"linear",position:"left",min:0,suggestedMax:53.3,
+        grid:{color:GRID},ticks:{color:"#7C6FCD",font:{size:11}},
+        title:{display:true,text:"lead time (days)",color:"#7C6FCD",font:{size:11}}},
+      y2:{type:"linear",position:"right",min:0,suggestedMax:9,
+        grid:{drawOnChartArea:false},
+        ticks:{color:"#BA7517",font:{size:11},precision:0},
+        title:{display:true,text:"releases / month",color:"#BA7517",font:{size:11}}}
+    }
+  }
+});
+
+new Chart(document.getElementById("c2"),{
+  type:"bar",
+  data:{
+    labels:["Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26","Jul 26"],
+    datasets:[
+      {type:"bar",label:"Patches",data:[0,0,1,0,1,2,1,0,3,3,1,0,0],
+       backgroundColor:"rgba(216,90,48,0.65)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
+      {type:"line",label:"CFR",data:[null,null,50.0,100.0,0.0,33.3,0.0,0.0,14.3,25.0,0.0,0.0,0.0],
+       borderColor:"#3B6D11",borderWidth:2.5,pointRadius:4,pointBackgroundColor:"#3B6D11",
+       fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    interaction:{mode:"index",intersect:false},
+    plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:ctx=>
+      ctx.dataset.label==="Patches"
+        ? "Patch releases: "+ctx.parsed.y
+        : "Change failure rate: "+ctx.parsed.y+"%"}}},
+    scales:{
+      x:{grid:{color:GRID},ticks:{color:AXIS,font:{size:11},maxRotation:45,autoSkip:true,maxTicksLimit:12}},
+      y:{type:"linear",position:"left",min:0,suggestedMax:20,grid:{color:GRID},
+        ticks:{color:"#3B6D11",font:{size:11},callback:v=>v+"%"},
+        title:{display:true,text:"change failure rate",color:"#3B6D11",font:{size:11}}},
+      y2:{type:"linear",position:"right",min:0,suggestedMax:4,
+        grid:{drawOnChartArea:false},
+        ticks:{color:"#A8431F",font:{size:11},precision:0},
+        title:{display:true,text:"patch releases",color:"#A8431F",font:{size:11}}}
+    }
+  }
+});
+</script>
+</body>
+</html>
