@@ -30,9 +30,9 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <div class="metrics">
     <div class="m"><div class="ml">total story points</div><div class="mv" style="color:#2C2C2A">79</div></div>
     <div class="m"><div class="ml">done</div><div class="mv" style="color:#3B6D11">40</div></div>
-    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">21.0</div></div>
+    <div class="m"><div class="ml">in progress</div><div class="mv" style="color:#E6A817">24.0</div></div>
     <div class="m"><div class="ml">remaining</div><div class="mv" style="color:#D85A30">39</div></div>
-    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">6.4<span class="mvsm"> story points/wk</span></div></div>
+    <div class="m"><div class="ml">avg velocity</div><div class="mv" style="color:#7C6FCD">6.2<span class="mvsm"> story points/wk</span></div></div>
   </div>
   <div class="legend">
     <span><span class="sw" style="background:#EF9F27"></span>completed / wk</span>
@@ -48,26 +48,26 @@ h1{font-size:15px;font-weight:500;color:#2C2C2A;margin:0 0 1rem}
   <p class="meta">
     <span>Start date: 29 Jun 2026</span>
     <span>·</span>
-    <span>Projected completion: ~29 Sep 2026</span>
+    <span>Projected completion: ~30 Sep 2026</span>
   </p>
-  <p class="ts">Generated 11 Aug 2026 06:18</p>
+  <p class="ts">Generated 12 Aug 2026 06:28</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 new Chart(document.getElementById("c"),{
   type:"bar",
   data:{
-    labels:["5 Jul","12 Jul","19 Jul","26 Jul","2 Aug","9 Aug","11 Aug","18 Aug","25 Aug","1 Sep","8 Sep","15 Sep","22 Sep","29 Sep"],
+    labels:["5 Jul","12 Jul","19 Jul","26 Jul","2 Aug","9 Aug","12 Aug","19 Aug","26 Aug","2 Sep","9 Sep","16 Sep","23 Sep","30 Sep"],
     datasets:[
       {type:"bar",label:"Completed/wk",data:[0,8,16,0,8,8,0,null,null,null,null,null,null,null],
        backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"Avg velocity",data:[0.0,4.0,12.0,8.0,4.0,8.0,6.2,null,null,null,null,null,null,null],
+      {type:"line",label:"Avg velocity",data:[0.0,4.0,12.0,8.0,4.0,8.0,5.6,null,null,null,null,null,null,null],
        borderColor:"#7C6FCD",borderWidth:1.5,borderDash:[4,3],
        pointRadius:0,fill:false,yAxisID:"y2",spanGaps:false,tension:0},
       {type:"line",label:"Remaining",data:[79,71,55,55,47,39,39,null,null,null,null,null,null,null],
        borderColor:"#D85A30",backgroundColor:"rgba(216,90,48,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#D85A30",fill:false,yAxisID:"y",spanGaps:false,tension:0.1},
-      {type:"line",label:"Projected",data:[null,null,null,null,null,null,39,32.64,26.27,19.91,13.55,7.18,0.82,0.0],
+      {type:"line",label:"Projected",data:[null,null,null,null,null,null,39,32.78,26.56,20.33,14.11,7.89,1.67,0.0],
        borderColor:"#639922",borderWidth:1.5,borderDash:[8,4],
        pointRadius:0,fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
