@@ -52,31 +52,31 @@ td a:hover{border-bottom-color:#888780}
 <body>
 <div class="card">
   <h1>DORA metrics · 4 repositories (3 shipped in this window)</h1>
-  <p class="sub">24 Aug 2025 — 24 Aug 2026 · deployments are published GitHub
+  <p class="sub">31 Aug 2025 — 31 Aug 2026 · deployments are published GitHub
     releases; a release that later needed an out-of-band patch counts as a failed change</p>
 
   <div class="metrics">
     <div class="m">
       <div class="ml">deployment frequency</div>
-      <div class="mv" style="color:#E6A817">0.52<span class="mvsm"> rel/wk</span></div>
+      <div class="mv" style="color:#E6A817">0.58<span class="mvsm"> rel/wk</span></div>
       <div class="mb"><span class="pill" style="background:#E6A817">Medium</span>
-        <span class="ms">every 25 d per repo</span></div>
+        <span class="ms">every 24 d per repo</span></div>
     </div>
     <div class="m">
       <div class="ml">lead time for changes</div>
       <div class="mv" style="color:#E6A817">13.0 d</div>
       <div class="mb"><span class="pill" style="background:#E6A817">Medium</span>
-        <span class="ms">median of 166 commits</span></div>
+        <span class="ms">median of 185 commits</span></div>
     </div>
     <div class="m">
       <div class="ml">change failure rate</div>
-      <div class="mv" style="color:#D85A30">18.5%</div>
+      <div class="mv" style="color:#D85A30">20.0%</div>
       <div class="mb"><span class="pill" style="background:#D85A30">Low</span>
-        <span class="ms">5 of 27 releases needed patching</span></div>
+        <span class="ms">6 of 30 releases needed patching</span></div>
     </div>
     <div class="m">
       <div class="ml">time to restore</div>
-      <div class="mv" style="color:#D85A30">24.6 d</div>
+      <div class="mv" style="color:#D85A30">24.0 d</div>
       <div class="mb"><span class="pill" style="background:#D85A30">Low</span>
         <span class="ms">median hotfix turnaround</span></div>
     </div>
@@ -89,7 +89,7 @@ td a:hover{border-bottom-color:#888780}
   </div>
   <div class="cw">
     <canvas id="c1" role="img" aria-label="Releases per month and median lead time.">
-      27 releases in window; median lead time 13.0 d.
+      30 releases in window; median lead time 13.0 d.
     </canvas>
   </div>
 
@@ -100,7 +100,7 @@ td a:hover{border-bottom-color:#888780}
   </div>
   <div class="cw">
     <canvas id="c2" role="img" aria-label="Patch releases per month and change failure rate.">
-      12 patch releases of 27 total.
+      13 patch releases of 30 total.
     </canvas>
   </div>
 
@@ -117,25 +117,25 @@ td a:hover{border-bottom-color:#888780}
     <tbody>
       <tr>
         <td><a href="https://github.com/ripjar/data-collection-hub/releases">data-collection-hub</a></td>
-        <td class="num">16</td>
-        <td class="num">25 d</td>
-        <td class="num" style="color:#E6A817">14.3 d
-          <span class="dim">n=121</span></td>
-        <td class="num">7</td>
-        <td class="num" style="color:#D85A30">25%</td>
-        <td class="num">25.1 d</td>
-        <td>v2026.6 <span class="dim">14 Aug 26</span></td>
+        <td class="num">17</td>
+        <td class="num">24 d</td>
+        <td class="num" style="color:#E6A817">14.1 d
+          <span class="dim">n=124</span></td>
+        <td class="num">8</td>
+        <td class="num" style="color:#D85A30">29%</td>
+        <td class="num">24.6 d</td>
+        <td>v2026.6.1 <span class="dim">27 Aug 26</span></td>
       </tr>
       <tr>
         <td><a href="https://github.com/ripjar/ripjar-hydra/releases">ripjar-hydra</a></td>
-        <td class="num">9</td>
+        <td class="num">11</td>
         <td class="num">10 d</td>
-        <td class="num" style="color:#639922">4.1 d
-          <span class="dim">n=36</span></td>
+        <td class="num" style="color:#639922">4.6 d
+          <span class="dim">n=52</span></td>
         <td class="num">3</td>
-        <td class="num" style="color:#E6A817">11%</td>
+        <td class="num" style="color:#639922">9%</td>
         <td class="num">5.9 d</td>
-        <td>model/standard@v1.1.0 <span class="dim">14 Jul 26</span></td>
+        <td>sdk/2.3.1 <span class="dim">28 Aug 26</span></td>
       </tr>
       <tr>
         <td><a href="https://github.com/ripjar/bowler_hat/releases">bowler_hat</a></td>
@@ -165,6 +165,7 @@ td a:hover{border-bottom-color:#888780}
 
   <h2>Out-of-band patch releases</h2>
   <ul class="hf">
+      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v2026.6.1">data-collection-hub v2026.6.1</a> <span class="dim">27 Aug 26 · 13.1 d after v2026.6</span></li>
       <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.3">ripjar-hydra sdk/2.2.3</a> <span class="dim">1 May 26 · 15.9 d after sdk/2.2.0</span></li>
       <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.2">ripjar-hydra sdk/2.2.2</a> <span class="dim">21 Apr 26 · 5.9 d after sdk/2.2.0</span></li>
       <li><a href="https://github.com/ripjar/ripjar-hydra/releases/tag/sdk/2.2.1">ripjar-hydra sdk/2.2.1</a> <span class="dim">17 Apr 26 · 2.1 d after sdk/2.2.0</span></li>
@@ -174,8 +175,7 @@ td a:hover{border-bottom-color:#888780}
       <li><a href="https://github.com/ripjar/bowler_hat/releases/tag/v5.8.4">bowler_hat v5.8.4</a> <span class="dim">2 Mar 26 · 16.5 mo after v5.8.0</span></li>
       <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.3.1">data-collection-hub v3.29.3.1</a> <span class="dim">8 Jan 26 · 25.1 d after v3.29.3</span></li>
       <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.3-2">data-collection-hub v3.29.3-2</a> <span class="dim">16 Dec 25 · 2.2 d after v3.29.3</span></li>
-      <li><a href="https://github.com/ripjar/data-collection-hub/releases/tag/v3.29.2.1">data-collection-hub v3.29.2.1</a> <span class="dim">2 Dec 25 · 39.2 d after v3.29.2</span></li>
-      <li class="dim">… and 2 more, 12 in total</li>
+      <li class="dim">… and 3 more, 13 in total</li>
   </ul>
   <div class="warn"><strong>Caveats</strong>
     <ul>
@@ -188,11 +188,11 @@ td a:hover{border-bottom-color:#888780}
     </ul>
   </div>
   <p class="meta">
-    <span>Window: 24 Aug 2025 → 24 Aug 2026</span>
+    <span>Window: 31 Aug 2025 → 31 Aug 2026</span>
     <span>·</span>
-    <span>27 releases · 12 patches</span>
+    <span>30 releases · 13 patches</span>
   </p>
-  <p class="ts">Generated 24 Aug 2026 06:49</p>
+  <p class="ts">Generated 31 Aug 2026 06:59</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
@@ -209,9 +209,9 @@ new Chart(document.getElementById("c1"),{
   data:{
     labels:["Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26","Jul 26","Aug 26"],
     datasets:[
-      {type:"bar",label:"Releases",data:[0,2,1,1,3,1,1,7,4,3,1,2,1],
+      {type:"bar",label:"Releases",data:[0,2,1,1,3,1,1,7,4,3,1,2,4],
        backgroundColor:"rgba(239,159,39,0.7)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"Lead time",data:[null,31.8,12.0,40.2,3.0,22.0,null,3.0,6.1,0.0,10.7,10.0,22.9],
+      {type:"line",label:"Lead time",data:[null,31.8,12.0,40.2,3.0,22.0,null,3.0,6.1,0.0,10.7,10.0,22.8],
        borderColor:"#7C6FCD",backgroundColor:"rgba(124,111,205,0.06)",borderWidth:2.5,
        pointRadius:4,pointBackgroundColor:"#7C6FCD",fill:false,yAxisID:"y",
        spanGaps:true,tension:0.1}
@@ -242,9 +242,9 @@ new Chart(document.getElementById("c2"),{
   data:{
     labels:["Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26","Jul 26","Aug 26"],
     datasets:[
-      {type:"bar",label:"Patches",data:[0,1,0,1,2,1,0,3,3,1,0,0,0],
+      {type:"bar",label:"Patches",data:[0,1,0,1,2,1,0,3,3,1,0,0,1],
        backgroundColor:"rgba(216,90,48,0.65)",borderWidth:0,borderRadius:3,yAxisID:"y2"},
-      {type:"line",label:"CFR",data:[null,50.0,100.0,0.0,33.3,0.0,0.0,14.3,25.0,0.0,0.0,0.0,0.0],
+      {type:"line",label:"CFR",data:[null,50.0,100.0,0.0,33.3,0.0,0.0,14.3,25.0,0.0,0.0,0.0,25.0],
        borderColor:"#3B6D11",borderWidth:2.5,pointRadius:4,pointBackgroundColor:"#3B6D11",
        fill:false,yAxisID:"y",spanGaps:true,tension:0.1}
     ]
